@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} {{title}} {% endblock %}</title>
+
+{% block content %}
+<div class="container">
+    {% for item in random_recipes %}
+    <div class="card mb-3">
+        <class="column g-0">
+            <div class="col-lg-4">
+                <img class="img-responsive" src="{{ item.image.url }}" alt="Recipe" />
+            </div>
+            <div class="col-lg-8">
+                <div class="card-body text-center">
+                    <h1 class="card-text"><a href="{% url 'recipe-detail' item.pk %}">
+                            {{ item.name }}</a>
+                    </h1>
+                    <p class="card-text"><small>{{ item.create_at }}</small></p>
+                    <p class="card-text">{{ item.category.name }}</p>
+                    <p class="card-text">{{ item.user.username }}</p>
+                    <p class="card-text">{{ item.description }}</p>
+                </div>
+            </div>
+            >
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

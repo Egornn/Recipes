@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<title>{% block title %} {{title}} {% endblock %}</title>
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                    <strong>{{ cooking_item.recipe_id.name }}</strong>
+                </h2>
+                <hr>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <img class="img-responsive img-left" src="{{ cooking_item.recipe_id.image.url }}" alt="Рецепт" />
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body text-center">
+                        <p class="card-text"><small>{{ item.recipe_id.create_at }}</small></p>
+                        <h3 class="card-text">Category: </h3>
+                        <p class="card-text">{{ cooking_item.category_id.name }}</p>
+                        <h3 class="card-text">Description: </h3>
+                        <p class="card-text">{{ cooking_item.recipe_id.description }}</p>
+                        <h3 class="card-text">Steps: </h3>
+                        <p class="card-text">{{ cooking_item.recipe_id.steps }}</p>
+                        <h3 class="card-text">Time: </h3>
+                        <p class="card-text">{{ cooking_item.recipe_id.cooking_time }} min.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-center text-center">
+                <p><a href="{% url 'recipe-edit' cooking_item.pk %}" class="btn btn-default btn-lg">Change</a></p>
+                <p><a href="{% url 'category-edit' cooking_item.pk %}" class="btn btn-default btn-lg">Update category</a></p>
+                <p><a href="{% url 'recipe-delete' cooking_item.pk %}" class="btn btn-default btn-lg">Delete</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
