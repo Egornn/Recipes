@@ -10,6 +10,6 @@ The main idea of our project is that people can share their favorite recipes wit
 - **Recipe Creation:** Upload your recipe with photos, ingredients, and detailed cooking instructions.
 - **Editing and Updates:** Easily edit your recipes, add new details or photos.
 
-## Get ready to share your recipes and explore the world of flavors at [Tuntis.pythonanywhere.com](http://tunti.pythonanywhere.com). Welcome to our culinary community! 🍽️👩‍🍳👨‍🍳
+## Get ready to share your recipes and explore the world of flavors at [tunti.pythonanywhere.com](http://tunti.pythonanywhere.com). Welcome to our culinary community! 🍽️👩‍🍳👨‍🍳
 
 
